@@ -1,0 +1,18 @@
+{
+  "configurations": [
+      {
+          "name": "Linux",
+          "defines": [],
+          "compilerPath": "/usr/bin/gcc",
+          "cStandard": "c11",
+          "cppStandard": "c++20",
+          "intelliSenseMode": "linux-gcc-x64",
+          "includePath": [
+              "${workspaceFolder}/include/**",
+              "/opt/Qt/6.5.3/gcc_64/**"
+
+          ]
+      }
+  ],
+  "version": 4
+}
