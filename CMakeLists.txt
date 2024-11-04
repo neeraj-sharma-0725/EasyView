@@ -12,7 +12,7 @@ set(CMAKE_PREFIX_PATH "/opt/Qt/6.5.3/gcc_64")  # allow CMake to find qt librarie
 
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)  # find either Qt5 or Qt6 and, based on the major version
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Qml Quick QuickControls2) # load Widgets module 
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets) # load Widgets module 
 
 
 set(PROJECT_CURRENT_HEADER_PATH ${CMAKE_CURRENT_SOURCE_DIR})
@@ -43,10 +43,7 @@ endif()
 target_link_libraries(
   ${PROJECT_NAME} 
   PUBLIC 
-  Qt${QT_VERSION_MAJOR}::Widgets 
-  Qt${QT_VERSION_MAJOR}::Qml 
-  Qt${QT_VERSION_MAJOR}::Quick 
-  Qt${QT_VERSION_MAJOR}::QuickControls2
+  Qt${QT_VERSION_MAJOR}::Widgets
 )
 
 include(GNUInstallDirs)
