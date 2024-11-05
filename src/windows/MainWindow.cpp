@@ -1,9 +1,10 @@
-#include <MainWindow.h>
+#include <windows/MainWindow.h>
 #include <QGraphicsDropShadowEffect>
+#include <bars/MenuBar.h>
+#include <menus/FileMenu.h>
 
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent) {
   m_menuBar = new MenuBar(this);
-
   std::string name("File");
   m_fileMenu = new FileMenu(name, this);
   
@@ -15,11 +16,6 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent) {
 }
 
 void MainWindow::decorateWindow(){
-  QGraphicsDropShadowEffect *shadow = new QGraphicsDropShadowEffect(this);
-  shadow->setBlurRadius(20);
-  shadow->setOffset(0, 5);
-  shadow->setColor(Qt::gray);
-  this->setGraphicsEffect(shadow);
   setStyleSheet("background-color: white; border-radius: 10px;");
   resize(400, 300);
 }

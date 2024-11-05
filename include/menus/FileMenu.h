@@ -1,7 +1,6 @@
 #pragma once
 
 #include <QMenu>
-#include <QMessageBox>
 
 class FileMenu : public QMenu {
   Q_OBJECT

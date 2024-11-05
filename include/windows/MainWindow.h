@@ -1,8 +1,9 @@
 #pragma once
 
 #include <QMainWindow>
-#include <bar/MenuBar.h>
-#include <menu/FileMenu.h>
+
+class MenuBar;
+class FileMenu;
 
 class MainWindow : public QMainWindow {
   Q_OBJECT

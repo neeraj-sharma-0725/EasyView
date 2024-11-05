@@ -1,10 +1,11 @@
 set(PROJECT_CURRENT_HEADER_PATH "${PROJECT_CURRENT_HEADER_PATH}/include")
 set(PROJECT_CURRENT_SOURCE_PATH "${PROJECT_CURRENT_SOURCE_PATH}/src")
 
-add_subdirectory(menu)
-add_subdirectory(bar)
+add_subdirectory(windows)
+add_subdirectory(menus)
+add_subdirectory(bars)
 
-list(APPEND WINDOW_SOURCES MainWindow)
+list(APPEND WINDOW_SOURCES Application)
 
 foreach(file IN LISTS WINDOW_SOURCES)
   list(APPEND PROJECT_SOURCES ${PROJECT_CURRENT_HEADER_PATH}/${file}.h)

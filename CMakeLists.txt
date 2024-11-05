@@ -18,7 +18,6 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets) # load Widgets m
 set(PROJECT_CURRENT_HEADER_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 set(PROJECT_CURRENT_SOURCE_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 
-
 set(PROJECT_SOURCES
   main.cpp
 )
@@ -39,6 +38,18 @@ else()
     ${PROJECT_SOURCES}
   )
 endif()
+
+
+#specify resources path
+set(RESOURCES_SOURCE_DIR ${CMAKE_SOURCE_DIR}/resources)
+set(RESOURCES_DEST_DIR ${CMAKE_BINARY_DIR}/resources)
+
+#copy resources to out directory
+add_custom_command(
+  TARGET ${PROJECT_NAME} POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E copy_directory ${RESOURCES_SOURCE_DIR} ${RESOURCES_DEST_DIR}
+  COMMENT "Copying resources folder to the build directory"
+)
 
 target_link_libraries(
   ${PROJECT_NAME} 

@@ -1,4 +1,5 @@
-#include <menu/FileMenu.h>
+#include <menus/FileMenu.h>
+#include <QMessageBox>
 
 FileMenu::FileMenu(std::string& name, QWidget* parent): QMenu(QString::fromStdString(name), parent){
   m_newAction = this->addAction("New");
