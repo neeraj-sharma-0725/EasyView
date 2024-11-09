@@ -24,7 +24,7 @@ set(PROJECT_SOURCES
 
 add_subdirectory(src build)
 
-message(STATUS ${PROJECT_SOURCES})
+# message(STATUS ${PROJECT_SOURCES})
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 

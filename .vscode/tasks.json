@@ -5,6 +5,7 @@
 			"type": "cmake",
 			"label": "CMake: configure",
 			"command": "configure",
+			"dependsOn": "CMake: clean",
 			"problemMatcher": [],
 			"detail": "CMake template configure task"
 		},

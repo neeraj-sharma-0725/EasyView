@@ -12,7 +12,7 @@ Application::~Application(){
 }
 
 void Application::decorate(){
-  QFile file = QFile("./resources/style.css");
+  QFile file = QFile("../resources/styles.css");
   if(file.open(QFile::ReadOnly)){
       QString styleSheet = QLatin1String(file.readAll());
       this->setStyleSheet(styleSheet);

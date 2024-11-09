@@ -4,6 +4,7 @@ set(PROJECT_CURRENT_SOURCE_PATH "${PROJECT_CURRENT_SOURCE_PATH}/src")
 add_subdirectory(windows)
 add_subdirectory(menus)
 add_subdirectory(bars)
+add_subdirectory(buttons)
 
 list(APPEND WINDOW_SOURCES Application)
 

@@ -1,4 +1,7 @@
 MainWindow {
-  background-color: #000000;
-  border: 1px solid #ccc
+  background-color: whitesmoke;
+}
+
+MenuBar {
+  background-color: lightgray;
 }

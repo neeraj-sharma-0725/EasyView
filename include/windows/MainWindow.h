@@ -4,6 +4,7 @@
 
 class MenuBar;
 class FileMenu;
+class TitleBar;
 
 class MainWindow : public QMainWindow {
   Q_OBJECT
@@ -13,8 +14,6 @@ public:
 
 private:
   void decorateWindow();
-
-private:
-  MenuBar* m_menuBar;
-  FileMenu* m_fileMenu;
+  TitleBar* createTitleBar(QWidget*);
+  FileMenu* createFileMenu(QWidget*);
 };
